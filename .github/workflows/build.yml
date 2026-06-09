@@ -22,7 +22,7 @@ jobs:
         run: |
           corepack enable
           corepack prepare yarn@4.9.1 --activate
-          yarn
+          yarn install --no-immutable
           corepack yarn install
       - name: List files
         run: ls -lah
