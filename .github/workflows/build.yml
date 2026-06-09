@@ -21,6 +21,7 @@ jobs:
       - name: Initialize Yarn Workspaces
         run: |
           corepack enable
+          corepack prepare yarn@4.9.1 --activate
           yarn
           corepack yarn install
       - name: List files
