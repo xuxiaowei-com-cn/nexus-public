@@ -15,6 +15,7 @@ jobs:
           node -v
           npm -v
           npx -v
+          yarn -v
       - name: List files
         run: ls -lah
       - name: Initialize Yarn Workspaces
