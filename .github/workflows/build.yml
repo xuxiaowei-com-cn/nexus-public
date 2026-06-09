@@ -20,5 +20,6 @@ jobs:
       - name: Initialize Yarn Workspaces
         run: |
           corepack enable
+          corepack yarn install
       - name: List files
         run: ls -lah
