@@ -24,5 +24,5 @@ jobs:
           corepack prepare yarn@4.9.1 --activate
           yarn install --no-immutable
           corepack yarn install
-      - name: List files
-        run: ls -lah
+      - name: Build
+        run: ./mvnw -B clean install -Ppublic
