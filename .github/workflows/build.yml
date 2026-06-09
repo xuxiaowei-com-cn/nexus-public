@@ -20,8 +20,8 @@ jobs:
         run: ls -lah
       - name: Initialize Yarn Workspaces
         run: |
-          yarn
           corepack enable
+          yarn
           corepack yarn install
       - name: List files
         run: ls -lah
