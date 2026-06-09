@@ -1,0 +1,24 @@
+name: build
+on:
+  push:
+    branches:
+      - "xuxiaowei/*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Check Node.js versions
+        run: |
+          node -v
+          npm -v
+          npx -v
+      - name: List files
+        run: ls -lah
+      - name: Initialize Yarn Workspaces
+        run: |
+          corepack enable
+      - name: List files
+        run: ls -lah
